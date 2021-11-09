@@ -2,27 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>API</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="js/script.js" defer></script>
+    <title>API Pixabay</title>
 </head>
-    <body>
-        <header>
-            <div class="pesquisa-container">
-                <div id="lupa">
-                    <img src="../img/lupa.png" alt="Pesquisar">
-                </div>
-                <input type="text" placeholder="Pesquisar imagens">
+<body class="column">
+    <header>
+        <div class="centralizacao">
+            <img class="logo"src="img/23346.png">
+            <div class="container-pesquisa linhas">
+                <img src="img/icon-pesquisa.png">
+                <input id="pesquisa" type="text" placeholder="Search">
             </div>
-        </header>
-        <main>
-            <div class="galeria-container">
-
+            <select class="linhas categorias">
+                <option value="all">Images</option>
+                <option value="photo">Photos</option>
+                <option value="vector">Vector Images</option>
+                <option value="illustration">Illustration</option>
+            </select>
+        </div>
+    </header>
+    <main class="coluna">
+        <div class="centralizacao">
+            <div class="status">
             </div>
-        </main>
-        <footer>
-            Copyright © 2021 | George Leal
-        </footer>
-    </body>
+        </div>
+         <div id="container-galeria">
+             
+         </div>   
+    </main>
+</body>
 </html>
