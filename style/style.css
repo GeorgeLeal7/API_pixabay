@@ -120,7 +120,6 @@ select{
     font-size: 1rem;
     color: #7d7d7d;
     padding-left: 10px;
-    background-color: transparent;
 /*    text-align: center;*/
 }
 /* ********************************************* */
@@ -167,10 +166,11 @@ select{
     display: flex;
     height: 45px;
     transition: all .4s;
+    
 }
 
 /* Serve para a imagem de perfil aparecer na foto */
-#container-galeria > div:hover > .perfil,#container-galeria > div:hover > .perfil img{
+#container-galeria > div:hover > .perfil, #container-galeria > div:hover > .perfil img{
     opacity: 1;
     transition: all .6s;
 }
@@ -178,7 +178,7 @@ select{
 .options{
     width: 100%;
     height: 0px;
-    background-image: linear-gradient(to top, #0009, #0004, transparent);
+    background-image: linear-gradient(to top, #0009, #0005, transparent);
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -187,6 +187,7 @@ select{
     padding-right: 20px;
     opacity: 0;
 }
+
 .info{
     margin-left: 10px;
     color: white;
@@ -199,6 +200,26 @@ select{
     width: 100%;
     height: 100%;
 }
+
+.itens-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+    font-size: 0.9rem;
+}
+.itens-img img{
+    width: 16px;
+    margin-right: 3px;
+}
+
+.itens-img img:hover{
+    transition: 0.3s;
+    transform: scale(130%);
+}
+
+
 
 .perfil{
     width: 70px;
@@ -217,3 +238,9 @@ select{
     border-radius: 25px;
     opacity: 0;
 }
+
+.perfil img:hover{
+    transition: 0.3s;
+    transform: scale(115%);
+}
+

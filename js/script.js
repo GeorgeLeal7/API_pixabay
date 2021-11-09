@@ -13,7 +13,7 @@ const pesquisarImagens = async(evento) =>{
         const typeImage = document.querySelector(".categorias").value;
 
         //API Key do usuário
-        const apiKey = "23670717-85b5103b3d880933d4e67c566"
+        const apiKey = "23670717-85b5103b3d880933d4e67c566";
 
         //Buscando a imagem através do link
         const pesquisa = evento.target.value;
@@ -35,6 +35,12 @@ const pesquisarImagens = async(evento) =>{
 
 //Criando um container para as imagens da API aparecerem na Tela 
 const criarItem = item =>{
+
+    if(item.userImageURL == ""){
+        item.userImageURL = "img/user.png"
+    } 
+
+
     const container = document.querySelector("#container-galeria");
     const divCard =document.createElement("div");
     const tags = item.tags.replace(/,+/g, '');
@@ -47,9 +53,9 @@ const criarItem = item =>{
                 <div class="options">
                     <div class="info">${tags}</div>
                     <div class="linhas">
-                        <div class="linhas info"><img src="img/curtida.png">${item.likes}</div>
-                        <div class="linhas info"><img src="img/comentario.png">${item.comments}</div>
-                        <div class="linhas info"><img src="img/bandeira.png"></div>
+                        <div class="itens-img"><img src="img/curtida.png">${item.likes}</div>
+                        <div class="itens-img"><img src="img/comentario.png">${item.comments}</div>
+                        <div class="itens-img"><img src="img/bandeira.png"></div>
                     </div>
                 </div>
                 <a class="card" href="${item.pageURL}">
@@ -64,7 +70,7 @@ const carregarStatus = (status,pesquisa) =>{
     const container = document.querySelector(".status");
     const novoStatus = document.createElement("p");
     novoStatus.classList = ".textPadrao";
-    novoStatus.innerHTML = `${status.totalHits} free pictures for ${pesquisa}`;
+    novoStatus.innerHTML = `${status.totalHits} free pictures to ${pesquisa}`;
     container.appendChild(novoStatus);
 }
 
